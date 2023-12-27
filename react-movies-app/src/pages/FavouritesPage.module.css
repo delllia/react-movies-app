@@ -1,0 +1,45 @@
+.movieApp {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 2em;
+}
+
+.movieApp > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+.button{
+	background-color: var(--colorBlack);
+}
+
+.header{
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 10fr 1fr;
+	align-items:flex-start;
+	height: 10em;
+}
+
+.movieHeading {
+	margin-right: 2em;
+	cursor: pointer;
+}
+
+.searchBox{
+	width: 30em;
+}
+
+.scrollableContainer {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 2em;
+}
+
+.hidden {
+	overflow: hidden;
+}
+
+.searchBox {
+margin-top: 1em;
+}

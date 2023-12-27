@@ -1,0 +1,7 @@
+.header{
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 10fr 1fr;
+	align-items:flex-start;
+	height: 10em;
+}

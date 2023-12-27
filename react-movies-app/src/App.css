@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--colorWhite: #ffffff;
+	--colorBlack: #141414;
+	--colorGrey: #a7a7a7;
+	--colorOverlay: rgba(42, 42, 42, 0.8);
+	--colorOverlayloadMore: rgba(0, 0, 0, 0.8);
+}
+
+body {
+	background: var(--colorBlack);
+	color: var(--colorWhite);
+}
+
+.movie-app {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 2em;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+.button {
+	background-color: var(--colorBlack);
+}
+
+.header {
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 10fr 1fr;
+	align-items: flex-start;
+	height: 10em;
+}
+
+.movieHeading {
+	margin-right: 2em;
+	cursor: pointer;
+}
+
+.search-box {
+	width: 30em;
+}
+
+.scrollable-row {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 2em;
+}
+
+.hidden {
+	overflow: hidden;
+}
+
+.search-box {
+	margin-top: 1em;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
