@@ -45,8 +45,8 @@ const MoviesPage = () => {
 		setIsLoading(true);
 		if (debouncedSearch) {
 			addLoadMoreValue(debouncedSearch);
+			getMovieRequest(debouncedSearch, pageNo);
 		}
-		getMovieRequest(debouncedSearch, pageNo);
 	}, [debouncedSearch]);
 
 	const handleNavigate = (event, route) => {
@@ -130,12 +130,10 @@ const MoviesPage = () => {
 	const openModal = (event) => {
 		event.preventDefault();
 		setIsModalVisible(true);
-		document.body.classList.add("hidden");
 	};
 
 	const closeModal = () => {
 		setIsModalVisible(false);
-		document.body.classList.remove("hidden");
 	};
 
 	const handleCategoryClick = (genreId, genreName) => {
@@ -183,7 +181,7 @@ const MoviesPage = () => {
 	};
 
 	return (
-		<div className={styles.movieApp}>
+		<div className={isModalVisible ? styles.hidden : styles.movieApp}>
 			<Header
 				genre={genre}
 				genres={genres}
