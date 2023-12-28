@@ -24,13 +24,6 @@
 	overflow: hidden;
 }
 
-.arrowDown {
-	margin-top: 0;
-	width: 1em;
-	height: 1em;
-	font-size: 1.2em;
-}
-
 .loadMoreButtons {
 	display: flex;
 	justify-content: center;

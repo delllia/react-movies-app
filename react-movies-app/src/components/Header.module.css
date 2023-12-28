@@ -1,7 +1,15 @@
-.header{
+.header {
 	margin-top: 2em;
 	display: grid;
 	grid-template-columns: 1fr 1fr 10fr 1fr;
-	align-items:flex-start;
+	align-items: flex-start;
 	height: 10em;
+}
+
+.arrowDown {
+	margin-top: 0;
+	width: 1em;
+	height: 1em;
+	font-size: 1.2em;
+	cursor: pointer;
 }

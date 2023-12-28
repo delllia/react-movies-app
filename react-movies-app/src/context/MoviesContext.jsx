@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const initialContext = {
 	favourites: [],
 	loadMore: "",
-	pageNo: 1,
+	pageNo: 0,
 	addFavourite: () => {},
 	removeFavourite: () => {},
 	addLoadMoreValue: () => {},
