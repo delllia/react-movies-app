@@ -42,12 +42,17 @@ const MoviesPage = () => {
 	}, []);
 
 	useEffect(() => {
-		setIsLoading(true);
 		if (debouncedSearch) {
 			addLoadMoreValue(debouncedSearch);
 			getMovieRequest(debouncedSearch, pageNo);
 		}
 	}, [debouncedSearch]);
+
+	useEffect(() => {
+		typeof loadMore === "string"
+			? getMovieRequest(loadMore, pageNo)
+			: getMoviesByGenre(loadMore, pageNo);
+	}, [pageNo]);
 
 	const handleNavigate = (event, route) => {
 		route = event.target.textContent.toLowerCase();
@@ -67,6 +72,7 @@ const MoviesPage = () => {
 
 	const getMovieRequest = async (debouncedSearch, pageNo) => {
 		try {
+			setIsLoading(true);
 			if (debouncedSearch !== "") {
 				addLoadMoreValue(debouncedSearch);
 				url = `https://api.themoviedb.org/3/search/movie?page=${pageNo}&query=${debouncedSearch}&include_adult=false&language=en-US&with_original_language=en&api_key=${apiKey}`;
@@ -104,6 +110,7 @@ const MoviesPage = () => {
 
 	const getMoviesByGenre = async (genreId, pageNo) => {
 		try {
+			setIsLoading(true);
 			addLoadMoreValue(genreId);
 			url = `https://api.themoviedb.org/3/discover/movie?page=${pageNo}&with_genres=${genreId}&&api_key=${apiKey}`;
 			const response = await fetch(url);
@@ -160,16 +167,10 @@ const MoviesPage = () => {
 
 	const loadNextMovies = () => {
 		increasePageNo();
-		typeof loadMore === "string"
-			? getMovieRequest(loadMore, pageNo)
-			: getMoviesByGenre(loadMore, pageNo);
 	};
 
 	const loadPreviousMovies = () => {
 		decreasePageNo();
-		typeof loadMore === "string"
-			? getMovieRequest(loadMore, pageNo)
-			: getMoviesByGenre(loadMore, pageNo);
 	};
 
 	const addToFavourites = (movie) => {
