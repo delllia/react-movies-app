@@ -1,6 +1,6 @@
 # react-movies-app
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/preview.png?raw=true)
-![alt text](https://github.com/react-movies-app/src/assets/preview.png)
+![alt text](https://github.com/delllia/react-movies-app/react-movies-app/src/assets/preview.png)
 
 ### This app was created with Vite + ReactJS / bootstrapped with create-vite.
  You can get movie lists from www.themoviedb.org, search for a movie or add / remove to favourites list.
