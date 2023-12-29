@@ -6,9 +6,9 @@
 #
 ### To get started you need to:
 
- Clone the project
- npm install
- Use available scripts
+ * Clone the project
+ * npm install
+ * Use available scripts
 
 ### In the project directory, you can run:
 #
