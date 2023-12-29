@@ -1,7 +1,9 @@
 # react-movies-app
 ### This app was created with Vite + ReactJS and was bootstrapped with create-vite.
 #### You can get movie lists from www.themoviedb.org, search for a movie or add / remove to favourites list.
+
 <hr>
+
 ### Getting Started:
 ### To get started you need to:
 
