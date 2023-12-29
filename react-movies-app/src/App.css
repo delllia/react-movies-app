@@ -14,6 +14,8 @@
 body {
 	background: var(--colorBlack);
 	color: var(--colorWhite);
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 .movie-app {
@@ -60,9 +62,4 @@ body {
 
 .search-box {
 	margin-top: 1em;
-}
-
-body {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
 }
