@@ -78,7 +78,7 @@ const MoviesPage = () => {
 				url = `https://api.themoviedb.org/3/search/movie?page=${pageNo}&query=${debouncedSearch}&include_adult=false&language=en-US&with_original_language=en&api_key=${apiKey}`;
 				const response = await fetch(url);
 				const responseJson = await response.json();
-
+				console.log(response);
 				if (responseJson.results) {
 					const res = responseJson.results.filter((movie) => {
 						return movie.backdrop_path !== null;
@@ -88,7 +88,7 @@ const MoviesPage = () => {
 				}
 			} else if (genre === "All") {
 				addLoadMoreValue("");
-				url = `https://api.themoviedb.org/3/discover/movie?page=${pageNo}&api_key=${apiKey}`;
+				url = `https://api.themoviedb.org/3/discover/movie?page=${pageNo}&include_adult=false&api_key=${apiKey}`;
 				const response = await fetch(url);
 				const responseJson = await response.json();
 
